@@ -437,7 +437,7 @@ body {
 
 .pagination a {
 	display: block;
-	height: 20px;
+	height: 30px;
 	margin-bottom: 25px;
 	color: white;
 	position: relative;
@@ -448,11 +448,12 @@ body {
 .pagination a .hover-text {
 	position: absolute;
 	right: 15px;
-	top: -4px;
+	top: 4px;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease;
 	transition: opacity 0.5s ease;
 	padding-right: 15px;
+	font-size: 14px;
 }
 
 .pagination a:hover .hover-text {
@@ -497,6 +498,37 @@ body {
 	opacity: 1;
 	margin: 0 auto;
 	transition: all 0.5s ease;
+	display: none;
+}
+
+.pagination li a svg {
+	position: absolute;
+	top: -0.3px;
+	left: -14px;
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg)
+}
+
+.pagination a svg circle {
+	fill: transparent;
+	stroke: #fff;
+	stroke-width: 1.5;
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	-webkit-transition: stroke-dasharray 0s ease .3s, opacity .3s ease;
+	-o-transition: stroke-dasharray 0s ease .3s, opacity .3s ease;
+	transition: stroke-dasharray 0s ease .3s, opacity .3s ease;
+	opacity: 0
+}
+
+.pagination a.active svg circle, .pagination a:hover svg circle {
+	-webkit-transition: stroke-dasharray .6s ease, opacity 0s ease;
+	-o-transition: stroke-dasharray .6s ease, opacity 0s ease;
+	transition: stroke-dasharray .6s ease, opacity 0s ease;
+	stroke-dasharray: 585;
+	opacity: 1
 }
 
 .gallery-list ul {

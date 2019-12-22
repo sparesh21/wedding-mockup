@@ -74,7 +74,7 @@ $(document).ready(function() {
                     if (i === $.scrollify.currentIndex()) {
                         activeClass = "active";
                     }
-                    pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+                    pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span><svg width='30' height='30'><circle cx='15' cy='15'r='11.5'></circle></svg></a></li>";
                 });
 
                 pagination += "</ul>";

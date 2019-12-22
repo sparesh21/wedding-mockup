@@ -128,14 +128,14 @@ $(document).ready(function() {
     });
     var s2 = new ScrollMagic.Scene({
         // starting scene, when reaching this element
-        triggerElement: ".gallery",
-        duration: $(".gallery").outerHeight(),
+        triggerElement: ".desgin",
+        duration: $(".desgin").outerHeight(),
         reverse: true,
     });
     s2.on("enter", function(event) {
         var t3 = new TimelineMax();
         console.log("Scene home entered.");
-        t3.staggerFromTo('.gallery .col-lg-4', 2, {
+        t3.staggerFromTo('.desgin-wrap .col-lg-4', 2, {
             opacity: 0,
             yPercent: 50,
         }, {
@@ -151,10 +151,14 @@ $(document).ready(function() {
             s1, s2
         ]);
     }, 100);
+
+    $('[data-fancybox="gallery"]').fancybox({
+        // Options will go here
+    });
 });
 $(window).on('load', function() {
     $('.loader').fadeOut();
-    TweenMax.set('.banner-content h2, .banner-content p , .gallery .col-lg-4', {
+    TweenMax.set('.banner-content h2, .banner-content p , .desgin-wrap .col-lg-4', {
         css: {
             opacity: 0,
         }

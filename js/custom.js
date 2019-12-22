@@ -96,7 +96,7 @@ $(document).ready(function() {
 
     // init controller
     var scrollmagic = new ScrollMagic.Controller({
-        addIndicators: true,
+        addIndicators: false,
         globalSceneOptions: {
             //triggerHook: 'onEnter'
         }
